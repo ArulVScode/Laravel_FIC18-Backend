@@ -1,0 +1,937 @@
+{
+	"info": {
+		"_postman_id": "097b2567-2ac4-4cc1-bde8-2c9f08b1a034",
+		"name": "FIC_18-FoodDeliveryOrder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31126378"
+	},
+	"item": [
+		{
+			"name": "user/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"asrul fic18\",\r\n    \"email\":\"muhasrul@fic18.com\",\r\n    \"password\":\"22446688\",\r\n    \"phone\":\"085546231578\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restaurant/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Ucu",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "cucuru@fic18.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "258741",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "082545697812",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_name",
+							"value": "Soe_Kasuami",
+							"type": "text"
+						},
+						{
+							"key": "restaurant_address",
+							"value": "jl. masyrik, Tomia Induk",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/D:/Note-Pictures/png/download.png"
+						},
+						{
+							"key": "latlong",
+							"value": "124578,258963",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/restaurant/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "driver/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Budi",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "driver@fic18.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "963852",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "085214796355",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "/D:/Note-Pictures/png/icon/profile-major-icon-512x512-xosjbbdq.png"
+						},
+						{
+							"key": "license_plate",
+							"value": "DT2587DF",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/driver/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"driver",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"muhasrul@fic18.com\",\r\n    \"password\":\"22446688\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|MnTdL6gahoydKgWykJfncxJ0ucsgcGgxVMLG9PYe627018f5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"muhasrul@fic18.com\",\r\n    \"password\":\"22446688\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|MnTdL6gahoydKgWykJfncxJ0ucsgcGgxVMLG9PYe627018f5",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/latlong_update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 2|jw1Pjwco0cih0MR9EgDOxe57t8PcCr302mSKsi8k0d5d7dc9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latlong\":\"258741,36912345\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/update-latlong",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"update-latlong"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get restaurant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|MnTdL6gahoydKgWykJfncxJ0ucsgcGgxVMLG9PYe627018f5",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"muhasrul@fic18.com\",\r\n    \"password\":\"22446688\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/restaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nasi Padang",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Padang asli di jamin nikmat  nya",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "15000",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "is_available",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "is_favorite",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/Note-Notepad++/Warung_Makan/dist/img/product/Ikan_Bakar.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product(update)/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Nasi Parende\",\r\n    \"description\":\"MaKanan Khas Tomia Asli Pesisir\",\r\n    \"price\":30000,\r\n    \"stock\":100,\r\n    \"is_available\":1,\r\n    \"is_favorite\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product(delete)/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Nasi Parende\",\r\n    \"description\":\"MaKanan Khas Tomia Asli Pesisir\",\r\n    \"price\":30000,\r\n    \"stock\":100,\r\n    \"is_available\":1,\r\n    \"is_favorite\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/get product by restaurant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nasi & Ikan Parende",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Makan Khas Sulawesi Tenggara, Asli Tomia Pesisir",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "30000",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "is_available",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "is_favorite",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/Note-Notepad++/Warung_Makan/dist/img/product/Ikan_Bakar.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurant_id\":2,\r\n    \"shipping_cost\":25000,\r\n    \"order_items\":[\r\n        {\r\n            \"product_id\":2,\r\n            \"quantity\":2\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/get restaurant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"muhasrul@fic18.com\",\r\n    \"password\":\"22446688\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/order/restaurant?status=pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"restaurant"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/update/restaurant",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"status\":\"prepared\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/order/restaurant/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"restaurant",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/driver",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"status\":\"ready_for_delivery\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/order/driver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"driver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/driver/update/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"status\":\"delivered\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/order/driver/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"driver",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/user(history)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"status\":\"ready_for_delivery\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/order/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/user(update)/2",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 3|eHJ2hhb82HUy2hCwv31c92ADMAgreJ0GPxGXJGIKe07e8248",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"status\":\"processing\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/order/user/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"user",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
